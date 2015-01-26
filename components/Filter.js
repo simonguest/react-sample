@@ -1,12 +1,11 @@
 var Filter = React.createClass({
-  handleFilterChange: function() {
-    var value = this.refs.filterInput.getDOMNode().value;
-    this.props.updateFilter(value);
+  handleFilterChange: function(event) {
+    this.props.updateFilter(event.target.value);
   },
   render: function () {
     return (
       <div>
-      <input type="text" placeholder="Search People" ref="filterInput" onChange={this.handleFilterChange}/>
+      <input type="text" placeholder="Search People" onChange={this.handleFilterChange}/>
       </div>
     );
   }
