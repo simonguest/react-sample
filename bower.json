@@ -1,0 +1,22 @@
+{
+  "name": "react-test",
+  "version": "0.0.0",
+  "authors": [
+    "Simon Guest <simon.guest@concur.com>"
+  ],
+  "description": "React Tutorial",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Faker": "~2.1.2",
+    "react": "~0.12.2"
+  }
+}
