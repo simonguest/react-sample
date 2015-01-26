@@ -24,7 +24,7 @@ var PersonPanelContainer = React.createClass({
     return (
       <div>
         <Filter updateFilter={this.handleFilterUpdate}/>
-        <PersonPanel people={displayedPeople}/>
+        <PersonList people={displayedPeople}/>
       </div>
     );
   }

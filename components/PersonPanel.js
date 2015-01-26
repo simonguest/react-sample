@@ -1,19 +1,21 @@
 var PersonPanel = React.createClass({
-  render: function () {
-    var content;
-    if (this.props.people.length > 0){
-      var people = this.props.people.map(function(person){
-        return <div key={person.email}>
-          <h1>{person.name}</h1>
-          <h4>{person.email}</h4>
-          <img src={person.avatar}/>
-        </div>;
-      });
-      content = people;
+  handleAvatarChange: function() {
+    this.setState({avatar:faker.image.avatar()});
+  },
+  getInitialState: function() {
+    return {
+      name: this.props.name,
+      email: this.props.email,
+      avatar: this.props.avatar
     }
+  },
+  render: function () {
     return (
       <div>
-      {content}
+        <h1>{this.state.name}</h1>
+        <h4>{this.state.email}</h4>
+        <img src={this.state.avatar}/>
+        <button onClick={this.handleAvatarChange}>Change Avatar</button>
       </div>
     );
   }
