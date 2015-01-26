@@ -18,8 +18,9 @@ var PersonPanelContainer = React.createClass({
   },
   render: function () {
     var displayedPeople = this.state.people.filter(function(person){
-      var match = person.name.toLowerCase().indexOf(this.state.nameFilter.toLowerCase());
-      return (match !== -1);
+      var matchName = person.name.toLowerCase().indexOf(this.state.nameFilter.toLowerCase());
+      var matchEmail = person.email.toLowerCase().indexOf(this.state.nameFilter.toLowerCase());
+      return ((matchName !== -1) || (matchEmail !== -1));
     }.bind(this));
     return (
       <div>
