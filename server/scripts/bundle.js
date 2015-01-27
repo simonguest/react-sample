@@ -60968,9 +60968,7 @@ module.exports = require('./lib/React');
 var React = require('react');
 var PersonPanelContainer = require('./PersonPanelContainer.jsx');
 
-var App = React.createClass({displayName: "App",
-  render: function () {
-    return (
+var App = React.renderComponent(
       React.createElement("html", null, 
         React.createElement("head", {lang: "en"}, 
           React.createElement("meta", {charSet: "UTF-8"}), 
@@ -60982,12 +60980,9 @@ var App = React.createClass({displayName: "App",
             React.createElement(PersonPanelContainer, null)
           )
         )
-      )
-    )
-  }
-});
-
-module.exports = App;
+      ),
+      document.getElementById('react-app')
+);
 
 },{"./PersonPanelContainer.jsx":195,"react":190}],192:[function(require,module,exports){
 var React = require('react');

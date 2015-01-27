@@ -1,9 +1,7 @@
 var React = require('react');
 var PersonPanelContainer = require('./PersonPanelContainer.jsx');
 
-var App = React.createClass({
-  render: function () {
-    return (
+var App = React.renderComponent(
       <html>
         <head lang="en">
           <meta charSet="UTF-8"/>
@@ -15,9 +13,6 @@ var App = React.createClass({
             <PersonPanelContainer />
           </div>
         </body>
-      </html>
-    )
-  }
-});
-
-module.exports = App;
+      </html>,
+      document.getElementById('react-app')
+);
