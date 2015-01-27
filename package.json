@@ -13,7 +13,12 @@
     "react-async": "^2.0.1",
     "reactify": "^1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "browserify": "^8.1.1",
+    "gulp": "^3.8.10",
+    "reactify": "^1.0.0",
+    "vinyl-source-stream": "^1.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
